@@ -87,6 +87,7 @@ end
   def full?
    board.all? {|i| i == "X" || i == "O"}
  end 
+  
   def draw?
     if full? && !won? 
       return true 
@@ -117,6 +118,7 @@ def play
   until over? == true
   turn
 end
+
 if won?
       winner == "X" || winner == "O" 
       puts "Congratulations #{winner}!" 
